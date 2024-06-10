@@ -1,0 +1,15 @@
+
+<div class="row mt-4 mb-4 " >
+    {% for flan in lista_flanes %}
+    <div class="col-sm-6 mb-3 mb-sm-0 col-6">
+      <div class="card">
+        <img src="{{flan.image_url}}" alt="{{flan.name}}" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">{{flan.name}}</h5>
+          <p class="card-text">{{flan.description}}</p>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
