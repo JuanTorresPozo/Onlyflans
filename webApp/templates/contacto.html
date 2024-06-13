@@ -3,12 +3,24 @@
 {% block 'content' %}
  <div class="container"> 
         
-    Contacto
-    <form action="{% url "contacto" %}" method="post">
-            {% csrf_token %}
-            {{form}}
-            <input type="submit" value="Enviar formulario">
-    </form>
+    <h1> Contáctenos<br></h1>
+        <form action="{% url "contacto" %}" method="post">
+                {% csrf_token %}        
+                        
+                <div>
+                        <label class="form-label" for="id_customer_email">Correo:</label>
+                        <input class="form-control" type="email" name="customer_email" maxlength="320" required="" id="id_customer_email">
+                </div>
+                <div>
+                        <label class="form-label" for="id_customer_name">Nombre:</label>
+                        <input class="form-control" type="text" name="customer_name" maxlength="64" required="" id="id_customer_name">
+                </div>
+                <div>
+                        <label class="form-label" for="id_message">Mensaje:</label>
+                        <input class="form-control" type="text" name="message" required="" id="id_message">
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar Formulario</button>            
+        </form>
 
 </div>
 {% endblock%}

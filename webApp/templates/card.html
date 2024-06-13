@@ -1,15 +1,19 @@
 
-<div class="row mt-4 mb-4 " >
-    {% for flan in lista_flanes %}
-    <div class="col-sm-6 mb-3 mb-sm-0 col-6">
-      <div class="card">
-        <img src="{{flan.image_url}}" alt="{{flan.name}}" class="card-img-top">
-        <div class="card-body">
-          <h5 class="card-title">{{flan.name}}</h5>
-          <p class="card-text">{{flan.description}}</p>
-        </div>
+<div class="row mt-4 mb-4">
+  {% for flan in lista_flanes %}
+  <div class="col-6 col-md-4" style="width:25rem; ">
+    <div class="card mb-5" style="">
+      <img src="{{ flan.image_url }}" class="card-img-top" alt="..." width="18rem" height="250px">
+      <div class="card-body">
+        <h5 class="card-title">
+          {{ flan.name }}
+        </h5>
+        <p class="card-text">
+          {{ flan.description }}
+        </p>
       </div>
-    {% endfor %}
+    </div>
   </div>
+  {% endfor %}
 </div>
 
