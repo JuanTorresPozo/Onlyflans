@@ -80,5 +80,4 @@ def login(request):
         
         return redirect("/")
     
-def logout(request):
-        return redirect ("/")
+

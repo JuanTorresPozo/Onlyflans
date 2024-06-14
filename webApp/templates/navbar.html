@@ -31,12 +31,16 @@
             </a>
             <ul class="dropdown-menu">
               {% if user.is_authenticated %}
-                <li>User: {{ user.get_username}}</li>
-                <li><a href="{% url 'logout'%}?next={{request.path}}">Cerrar sesión</a></li>
+                  <li>
+                      <form action="{% url 'logout'%}" method="post" class="d-flex" role="search">
+                          {% csrf_token %}
+                          <button class="btn btn-outline-success" type="submit">Cerrar sesión</button>
+                      </form>
+                  </li>
               {% else %}
-                <li><a href="{% url 'login'%}?next={{request.path}}">Iniciar sesión</a></li>
+                  <li><a href="{% url 'login'%}">Iniciar sesión</a></li>
               {% endif %}
-            </ul>
+          </ul>
           </li>
         </ul>
       </div>

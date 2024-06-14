@@ -14,7 +14,7 @@
       <p>Por favor inicie sesión para ver esta página.</p>
 {% endif %}
 {% endif %}
-
+<div class=container> 
 <form method="post" action="{% url 'login' %}">
     {% csrf_token %}
     </table>    
@@ -37,5 +37,5 @@
 
   {# Asume que configura la vista de restablecimiento de contraseña en su URLconf #}
   <p><a href="{% url 'password_reset' %}">¿Olvidó su contraseña?</a></p>
-
+</div>
 {% endblock %}
