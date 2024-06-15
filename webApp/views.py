@@ -60,7 +60,7 @@ def contacto(request):
 def exito(request):
     return render (request, "exito.html",{})
 
-
+"""
 def login(request):
     #get -> mostrar el html
     if request.metodo == "GET":
@@ -79,5 +79,5 @@ def login(request):
         request.session ["email"] = email
         
         return redirect("/")
-    
+"""    
 

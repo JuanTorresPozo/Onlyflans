@@ -2,7 +2,9 @@
 
 {% block 'content' %}
 <div class="container">
-  <h1>Nuestros Flanes especiales para tu gusto...</h1>
+  <br>
+  <h2>Bienvenido {{user.get_username}}</h2>
+  <h3>Nuestros Flanes especiales para tu gusto...</h3>
   <br>
   {% block 'card' %}
   {% include 'card.html' %}
